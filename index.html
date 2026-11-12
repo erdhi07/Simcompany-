@@ -63,3 +63,24 @@
                     <p class="text-xs text-gray-400">As of 8:17 AM 11/12/26 | Company Value: <span class="text-green-400 font-semibold">$45,878</span></p>
                 </div>
             </div>
+<!-- Navigation Tabs -->
+            <nav class="flex flex-wrap gap-1 bg-[#121212] p-1 rounded-xl border border-[#2d2d2d]" id="nav-tabs">
+                <button onclick="switchTab('overview')" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg transition-all duration-200 bg-blue-600 text-white shadow" data-tab="overview">
+                    <i class="fa-solid fa-house mr-1"></i> Overview
+                </button>
+                <button onclick="switchTab('balancesheet')" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg transition-all duration-200 text-gray-400 hover:text-white hover:bg-[#2d2d2d]" data-tab="balancesheet">
+                    <i class="fa-solid fa-scale-balanced mr-1"></i> Balance Sheet
+                </button>
+                <button onclick="switchTab('incomestatement')" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg transition-all duration-200 text-gray-400 hover:text-white hover:bg-[#2d2d2d]" data-tab="incomestatement">
+                    <i class="fa-solid fa-file-invoice-dollar mr-1"></i> Income Statement
+                </button>
+                <button onclick="switchTab('cashflow')" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg transition-all duration-200 text-gray-400 hover:text-white hover:bg-[#2d2d2d]" data-tab="cashflow">
+                    <i class="fa-solid fa-money-bill-transfer mr-1"></i> Cash Flow
+                </button>
+                <button onclick="switchTab('ratios')" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg transition-all duration-200 text-gray-400 hover:text-white hover:bg-[#2d2d2d]" data-tab="ratios">
+                    <i class="fa-solid fa-percent mr-1"></i> Ratios
+                </button>
+            </nav>
+        </div>
+    </header>
+
