@@ -624,3 +624,214 @@
                         </div>
                     </div>
                 </div>
+
+<!-- Operating Efficiency -->
+                <div class="bg-[#1e1e1e] border border-[#2d2d2d] rounded-2xl p-5 shadow-sm space-y-3">
+                    <div class="flex justify-between items-center pb-2 border-b border-[#2d2d2d]">
+                        <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400">Operating Efficiency</h3>
+                        <i class="fa-solid fa-gears text-blue-400"></i>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between py-1">
+                            <span class="text-gray-300">Inventory Turnover</span>
+                            <span class="font-bold text-green-400">0.261</span>
+                        </div>
+                        <div class="flex justify-between py-1">
+                            <span class="text-gray-300">Assets Turnover</span>
+                            <span class="font-bold text-green-400">0.177</span>
+                        </div>
+                        <div class="flex justify-between py-1">
+                            <span class="text-gray-300">Operating Assets Turnover</span>
+                            <span class="font-bold text-green-400">0.374</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Liquidity Ratios -->
+                <div class="bg-[#1e1e1e] border border-[#2d2d2d] rounded-2xl p-5 shadow-sm space-y-3">
+                    <div class="flex justify-between items-center pb-2 border-b border-[#2d2d2d]">
+                        <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400">Liquidity Ratios</h3>
+                        <i class="fa-solid fa-shield-halved text-amber-400"></i>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between py-1">
+                            <span class="text-gray-300">Defensive Interval</span>
+                            <span class="font-bold text-green-400">0.457</span>
+                        </div>
+                        <div class="flex justify-between py-1">
+                            <span class="text-gray-300">Interest Coverage</span>
+                            <span class="font-bold text-red-400">-∞</span>
+                        </div>
+                        <div class="flex justify-between py-1">
+                            <span class="text-gray-300">Debt to Building Ratio</span>
+                            <span class="font-bold text-green-400">0.00%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1e1e1e] border-t border-[#2d2d2d] py-4 px-6 text-center text-xs text-gray-400 mt-auto">
+        Simcorp Financial Reporting Dashboard &bull; Interactive Chart.js & Tailwind Analytics &bull; Date: 11/12/26
+    </footer>
+
+    <!-- JavaScript Logic & Charts initialization -->
+    <script>
+        // Tab switching logic
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => {
+                el.classList.add('hidden');
+            });
+            document.querySelectorAll('.tab-btn').forEach(el => {
+                el.classList.remove('bg-blue-600', 'text-white', 'shadow');
+                el.classList.add('text-gray-400');
+            });
+            
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+            const activeBtn = document.querySelector(`[data-tab="${tabId}"]`);
+            if (activeBtn) {
+                activeBtn.classList.add('bg-blue-600', 'text-white', 'shadow');
+                activeBtn.classList.remove('text-gray-400');
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Initialize Chart.js Charts on Window Load
+        window.onload = function() {
+            // Chart defaults for dark theme
+            Chart.defaults.color = '#9ca3af';
+            Chart.defaults.borderColor = '#2d2d2d';
+
+            // 1. Asset Breakdown Doughnut Chart
+            const ctxAsset = document.getElementById('assetDoughnutChart').getContext('2d');
+            new Chart(ctxAsset, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Cash', 'Accounts Receivable', 'Inventory (Mat/WIP/FG)', 'Buildings', 'Valuation Allowance'],
+                    datasets: [{
+                        data: [8121, 163, 13691, 24150, -247],
+                        backgroundColor: [
+                            '#3b82f6',
+                            '#60a5fa',
+                            '#10b981',
+                            '#8b5cf6',
+                            '#ef4444'
+                        ],
+                        borderWidth: 2,
+                        borderColor: '#1e1e1e'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                boxWidth: 12,
+                                font: { size: 11 }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    let value = context.parsed || 0;
+                                    return ` ${label}: $${value.toLocaleString()}`;
+                                }
+                            }
+                        }
+                    },
+                    cutout: '65%'
+                }
+            });
+
+            // 2. Income & Expenses Bar Chart
+            const ctxIncome = document.getElementById('incomeBarChart').getContext('2d');
+            new Chart(ctxIncome, {
+                type: 'bar',
+                data: {
+                    labels: ['Sales', 'COGS', 'Op. Expenses', 'Game Income', 'Net Income'],
+                    datasets: [{
+                        label: 'Amount ($)',
+                        data: [8122, -3512, -2470, 18800, 20940],
+                        backgroundColor: [
+                            '#3b82f6',
+                            '#ef4444',
+                            '#f97316',
+                            '#10b981',
+                            '#22c55e'
+                        ],
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            grid: { color: '#2d2d2d' },
+                            ticks: {
+                                callback: function(value) {
+                                    return '$' + value.toLocaleString();
+                                }
+                            }
+                        },
+                        x: {
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+
+            // 3. Cash Flow Breakdown Horizontal Bar / Column Chart
+            const ctxCF = document.getElementById('cashflowChart').getContext('2d');
+            new Chart(ctxCF, {
+                type: 'bar',
+                data: {
+                    labels: ['Retail Receipts', 'Exchange Receipts', 'Exchange Payments', 'Employee Payments', 'Financing (Game)', 'Net Change in Cash'],
+                    datasets: [{
+                        label: 'Cash Flow ($)',
+                        data: [7881, 78, -14164, -3970, 18300, 8121],
+                        backgroundColor: [
+                            '#10b981',
+                            '#3b82f6',
+                            '#ef4444',
+                            '#f59e0b',
+                            '#8b5cf6',
+                            '#06b6d4'
+                        ],
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            grid: { color: '#2d2d2d' },
+                            ticks: {
+                                callback: function(value) {
+                                    return '$' + value.toLocaleString();
+                                }
+                            }
+                        },
+                        x: {
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+        };
+    </script>
+</body>
+</html>
