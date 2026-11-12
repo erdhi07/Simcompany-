@@ -450,3 +450,177 @@
                         </div>
                     </div>
                 </div>
+
+<!-- EVA Score & Quick Metrics -->
+                <div class="space-y-6 flex flex-col">
+                    <div class="bg-[#1e1e1e] border border-[#2d2d2d] rounded-2xl p-5 shadow-sm flex-1">
+                        <h3 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4 pb-2 border-b border-[#2d2d2d]">EVA Score Analysis</h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between py-2 px-3 bg-[#121212] rounded-xl">
+                                <span class="text-gray-300">Operating profit</span>
+                                <span class="font-bold text-white">$2,140</span>
+                            </div>
+                            <div class="flex justify-between py-2 px-3 bg-[#121212] rounded-xl">
+                                <span class="text-red-400">Capital charge</span>
+                                <span class="font-bold text-red-400">(-) $59</span>
+                            </div>
+                            <div class="flex justify-between py-3 px-3 bg-blue-500/10 border border-blue-500/20 rounded-xl font-bold text-base">
+                                <span class="text-white">Economic Value Added</span>
+                                <span class="text-blue-400">$2,081</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#1e1e1e] border border-[#2d2d2d] rounded-2xl p-5 shadow-sm">
+                        <h3 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">Profitability Quality</h3>
+                        <p class="text-xs text-gray-400 mb-4">High net profit margin driven by substantial game income and robust asset backing.</p>
+                        <div class="flex items-center justify-between text-xs font-semibold bg-[#121212] p-3 rounded-xl">
+                            <span class="text-gray-300">Operating Margin</span>
+                            <span class="text-green-400">26.35%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CASH FLOW TAB -->
+        <section id="tab-cashflow" class="tab-content hidden space-y-6">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-[#1e1e1e] border border-[#2d2d2d] p-5 rounded-2xl gap-4">
+                <div>
+                    <h2 class="text-xl font-bold text-white"><i class="fa-solid fa-money-bill-transfer text-cyan-500 mr-2"></i>Cash Flow Statement</h2>
+                    <p class="text-xs text-gray-400 mt-1">Operating, Investing, and Financing activities leading to total change in cash.</p>
+                </div>
+                <div class="bg-cyan-500/10 border border-cyan-500/20 px-4 py-2 rounded-xl text-cyan-400 text-sm font-semibold">
+                    Total Change in Cash: $8,121
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Activities Breakdown -->
+                <div class="bg-[#1e1e1e] border border-[#2d2d2d] rounded-2xl p-5 shadow-sm space-y-4 text-sm">
+                    <h3 class="text-sm font-bold uppercase tracking-wider text-gray-400 pb-2 border-b border-[#2d2d2d]">Operating Activities</h3>
+                    <div class="space-y-2">
+                        <div class="font-semibold text-cyan-400 text-xs uppercase tracking-wider">Cash Receipts</div>
+                        <div class="flex justify-between py-1 px-2 hover:bg-[#2d2d2d]/50 rounded-lg">
+                            <span class="text-gray-300 pl-2">From retail</span>
+                            <span class="font-medium text-white">$7,881</span>
+                        </div>
+                        <div class="flex justify-between py-1 px-2 hover:bg-[#2d2d2d]/50 rounded-lg">
+                            <span class="text-gray-300 pl-2">From exchange</span>
+                            <span class="font-medium text-white">$78</span>
+                        </div>
+                        <div class="flex justify-between py-1 px-2 hover:bg-[#2d2d2d]/50 rounded-lg">
+                            <span class="text-gray-300 pl-2">Other receipts (interest, poaching, royalties)</span>
+                            <span class="font-medium text-white">$0</span>
+                        </div>
+
+                        <div class="font-semibold text-red-400 text-xs uppercase tracking-wider pt-2">Cash Payments</div>
+                        <div class="flex justify-between py-1 px-2 hover:bg-[#2d2d2d]/50 rounded-lg">
+                            <span class="text-red-400 pl-2">To exchange</span>
+                            <span class="font-medium text-red-400">(-) $14,164</span>
+                        </div>
+                        <div class="flex justify-between py-1 px-2 hover:bg-[#2d2d2d]/50 rounded-lg">
+                            <span class="text-red-400 pl-2">To employees</span>
+                            <span class="font-medium text-red-400">(-) $3,970</span>
+                        </div>
+                        <div class="flex justify-between py-1 px-2 hover:bg-[#2d2d2d]/50 rounded-lg">
+                            <span class="text-red-400 pl-2">For fees</span>
+                            <span class="font-medium text-red-400">(-) $4</span>
+                        </div>
+                        <div class="flex justify-between py-2 px-3 bg-[#2d2d2d]/40 rounded-xl font-bold mt-2">
+                            <span>Net Operating Cash Flow</span>
+                            <span class="text-red-400">(-) $10,179</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Investing & Financing -->
+                <div class="bg-[#1e1e1e] border border-[#2d2d2d] rounded-2xl p-5 shadow-sm space-y-6 text-sm flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <h3 class="text-sm font-bold uppercase tracking-wider text-gray-400 pb-2 border-b border-[#2d2d2d]">Investing & Financing Activities</h3>
+                        
+                        <div>
+                            <div class="font-semibold text-blue-400 text-xs uppercase tracking-wider mb-2">Investing Activities</div>
+                            <div class="flex justify-between py-1 px-2 hover:bg-[#2d2d2d]/50 rounded-lg">
+                                <span class="text-gray-300">Investment in bonds & deposits</span>
+                                <span class="font-medium text-white">$0</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="font-semibold text-green-400 text-xs uppercase tracking-wider mb-2">Financing Activities</div>
+                            <div class="flex justify-between py-1 px-2 hover:bg-[#2d2d2d]/50 rounded-lg">
+                                <span class="text-gray-300">Bonds</span>
+                                <span class="font-medium text-white">$0</span>
+                            </div>
+                            <div class="flex justify-between py-1 px-2 hover:bg-[#2d2d2d]/50 rounded-lg">
+                                <span class="text-gray-300">From game</span>
+                                <span class="font-medium text-white">$18,300</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-[#2d2d2d]">
+                        <div class="flex justify-between items-center bg-cyan-500/10 border border-cyan-500/20 p-4 rounded-xl">
+                            <div>
+                                <span class="text-xs text-cyan-400 block uppercase font-bold tracking-wider">Total Change in Cash</span>
+                                <span class="text-xs text-gray-400">Operating + Investing + Financing</span>
+                            </div>
+                            <span class="text-xl font-bold text-cyan-400">$8,121</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINANCIAL RATIOS TAB -->
+        <section id="tab-ratios" class="tab-content hidden space-y-6">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-[#1e1e1e] border border-[#2d2d2d] p-5 rounded-2xl gap-4">
+                <div>
+                    <h2 class="text-xl font-bold text-white"><i class="fa-solid fa-percent text-amber-500 mr-2"></i>Financial Ratios & Efficiency</h2>
+                    <p class="text-xs text-gray-400 mt-1">Profitability, Operating Efficiency, and Liquidity ratios derived from financial statements.</p>
+                </div>
+                <div class="bg-amber-500/10 border border-amber-500/20 px-4 py-2 rounded-xl text-amber-400 text-sm font-semibold">
+                    ROE: 45.64%
+                </div>
+            </div>
+
+            <!-- Ratio Grid Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Profitability Ratios -->
+                <div class="bg-[#1e1e1e] border border-[#2d2d2d] rounded-2xl p-5 shadow-sm space-y-3">
+                    <div class="flex justify-between items-center pb-2 border-b border-[#2d2d2d]">
+                        <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400">Profitability Ratios</h3>
+                        <i class="fa-solid fa-chart-line text-green-400"></i>
+                    </div>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between py-1">
+                            <span class="text-gray-300">Gross Margin</span>
+                            <span class="font-bold text-green-400">56.76%</span>
+                        </div>
+                        <div class="flex justify-between py-1">
+                            <span class="text-gray-300">Operating Margin</span>
+                            <span class="font-bold text-green-400">26.35%</span>
+                        </div>
+                        <div class="flex justify-between py-1">
+                            <span class="text-gray-300">Net Profit Margin</span>
+                            <span class="font-bold text-green-400">257.82%</span>
+                        </div>
+                        <div class="flex justify-between py-1">
+                            <span class="text-gray-300">Return on Quick Assets</span>
+                            <span class="font-bold text-green-400">252.78%</span>
+                        </div>
+                        <div class="flex justify-between py-1">
+                            <span class="text-gray-300">Return on Equity</span>
+                            <span class="font-bold text-green-400">45.64%</span>
+                        </div>
+                        <div class="flex justify-between py-1">
+                            <span class="text-gray-300">Sales per Employee</span>
+                            <span class="font-bold text-green-400">26.805</span>
+                        </div>
+                        <div class="flex justify-between py-1">
+                            <span class="text-gray-300">Income per Employee</span>
+                            <span class="font-bold text-green-400">69.109</span>
+                        </div>
+                    </div>
+                </div>
