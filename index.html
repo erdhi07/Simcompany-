@@ -368,3 +368,85 @@
                 </div>
             </div>
         </section>
+
+<!-- INCOME STATEMENT TAB -->
+        <section id="tab-incomestatement" class="tab-content hidden space-y-6">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-[#1e1e1e] border border-[#2d2d2d] p-5 rounded-2xl gap-4">
+                <div>
+                    <h2 class="text-xl font-bold text-white"><i class="fa-solid fa-file-invoice-dollar text-green-500 mr-2"></i>Income Statement</h2>
+                    <p class="text-xs text-gray-400 mt-1">Breakdown of Gross Profit, Operating Expenses, Other Income, and Net Income.</p>
+                </div>
+                <div class="bg-green-500/10 border border-green-500/20 px-4 py-2 rounded-xl text-green-400 text-sm font-semibold">
+                    Net Income: $20,940
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Income details list -->
+                <div class="bg-[#1e1e1e] border border-[#2d2d2d] rounded-2xl p-5 shadow-sm lg:col-span-2">
+                    <h3 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4 pb-2 border-b border-[#2d2d2d]">Financial Performance Summary</h3>
+                    <div class="space-y-4 text-sm">
+                        <div>
+                            <div class="font-semibold text-blue-400 text-xs uppercase tracking-wider mb-2">Gross Profit</div>
+                            <div class="flex justify-between py-1 px-2 hover:bg-[#2d2d2d]/50 rounded-lg">
+                                <span class="text-gray-300 pl-2">Sales</span>
+                                <span class="font-medium text-white">$8,122</span>
+                            </div>
+                            <div class="flex justify-between py-1 px-2 hover:bg-[#2d2d2d]/50 rounded-lg">
+                                <span class="text-red-400 pl-2">Cost of goods sold</span>
+                                <span class="font-medium text-red-400">(-) $3,512</span>
+                            </div>
+                            <div class="flex justify-between py-1 px-2 hover:bg-[#2d2d2d]/50 rounded-lg">
+                                <span class="text-gray-300 pl-2">Freight Out</span>
+                                <span class="font-medium text-white">$0</span>
+                            </div>
+                            <div class="flex justify-between py-1 px-2 bg-[#2d2d2d]/30 rounded-lg font-semibold text-white mt-1">
+                                <span class="pl-2">Gross Profit Subtotal</span>
+                                <span class="text-green-400">$4,610</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="font-semibold text-red-400 text-xs uppercase tracking-wider pt-2 mb-2">Operating Expenses</div>
+                            <div class="flex justify-between py-1 px-2 hover:bg-[#2d2d2d]/50 rounded-lg">
+                                <span class="text-red-400 pl-2">Construction costs</span>
+                                <span class="font-medium text-red-400">(-) $2,466</span>
+                            </div>
+                            <div class="flex justify-between py-1 px-2 hover:bg-[#2d2d2d]/50 rounded-lg">
+                                <span class="text-red-400 pl-2">Exchange fees</span>
+                                <span class="font-medium text-red-400">(-) $4</span>
+                            </div>
+                            <div class="flex justify-between py-1 px-2 bg-[#2d2d2d]/30 rounded-lg font-semibold text-white mt-1">
+                                <span class="pl-2">Operating Expenses Subtotal</span>
+                                <span class="text-red-400">(-) $2,470</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="font-semibold text-green-400 text-xs uppercase tracking-wider pt-2 mb-2">Other Income (Loss)</div>
+                            <div class="flex justify-between py-1 px-2 hover:bg-[#2d2d2d]/50 rounded-lg">
+                                <span class="text-gray-300 pl-2">Game income</span>
+                                <span class="font-medium text-white">$18,800</span>
+                            </div>
+                            <div class="flex justify-between py-1 px-2 hover:bg-[#2d2d2d]/50 rounded-lg">
+                                <span class="text-gray-300 pl-2">Executive royalties / Gain on sale / Other</span>
+                                <span class="font-medium text-white">$0</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 border-t border-[#2d2d2d] space-y-2">
+                            <div class="flex justify-between font-bold text-base text-white">
+                                <span>NET INCOME</span>
+                                <span class="text-green-400">$20,940</span>
+                            </div>
+                            <div class="flex justify-between font-medium text-sm text-gray-300">
+                                <span>Other comprehensive income</span>
+                                <span class="text-white">$24,938</span>
+                            </div>
+                            <div class="flex justify-between font-bold text-lg text-white bg-green-500/10 p-3 rounded-xl border border-green-500/20">
+                                <span>TOTAL COMPREHENSIVE INCOME</span>
+                                <span class="text-green-400">$45,878</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
