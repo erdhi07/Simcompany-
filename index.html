@@ -153,4 +153,93 @@
                     </div>
                 </div>
 
+            <!-- Charts Row -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Asset Breakdown Doughnut -->
+                <div class="bg-[#1e1e1e] border border-[#2d2d2d] rounded-2xl p-5 shadow-sm flex flex-col">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-base font-bold text-white"><i class="fa-solid fa-pie-chart text-blue-500 mr-2"></i>Asset Allocation</h2>
+                        <span class="text-xs bg-[#2d2d2d] px-2.5 py-1 rounded-full text-gray-300">Total: $45,878</span>
+                    </div>
+                    <div class="relative flex-1 flex items-center justify-center min-h-[280px]">
+                        <canvas id="assetDoughnutChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Income & Expenses Bar Chart -->
+                <div class="bg-[#1e1e1e] border border-[#2d2d2d] rounded-2xl p-5 shadow-sm flex flex-col">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-base font-bold text-white"><i class="fa-solid fa-chart-column text-green-500 mr-2"></i>Income vs. Expenses</h2>
+                        <span class="text-xs bg-[#2d2d2d] px-2.5 py-1 rounded-full text-gray-300">Net: $20,940</span>
+                    </div>
+                    <div class="relative flex-1 flex items-center justify-center min-h-[280px]">
+                        <canvas id="incomeBarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Secondary Chart Row -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Cash Flow Breakdown -->
+                <div class="bg-[#1e1e1e] border border-[#2d2d2d] rounded-2xl p-5 shadow-sm lg:col-span-2 flex flex-col">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-base font-bold text-white"><i class="fa-solid fa-water text-cyan-500 mr-2"></i>Cash Flow Statement Breakdown</h2>
+                        <span class="text-xs bg-cyan-500/10 text-cyan-400 px-2.5 py-1 rounded-full">Net Change: +$8,121</span>
+                    </div>
+                    <div class="relative flex-1 min-h-[240px]">
+                        <canvas id="cashflowChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Quick Ratios Snapshot -->
+                <div class="bg-[#1e1e1e] border border-[#2d2d2d] rounded-2xl p-5 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-base font-bold text-white mb-3"><i class="fa-solid fa-gauge-high text-amber-500 mr-2"></i>Key Margins</h2>
+                        <div class="space-y-4 mt-2">
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span class="text-gray-400">Gross Margin</span>
+                                    <span class="text-green-400 font-bold">56.76%</span>
+                                </div>
+                                <div class="w-full bg-[#2d2d2d] h-2 rounded-full overflow-hidden">
+                                    <div class="bg-green-500 h-full rounded-full" style="width: 56.76%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span class="text-gray-400">Operating Margin</span>
+                                    <span class="text-green-400 font-bold">26.35%</span>
+                                </div>
+                                <div class="w-full bg-[#2d2d2d] h-2 rounded-full overflow-hidden">
+                                    <div class="bg-blue-500 h-full rounded-full" style="width: 26.35%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span class="text-gray-400">Net Profit Margin</span>
+                                    <span class="text-green-400 font-bold">257.82%</span>
+                                </div>
+                                <div class="w-full bg-[#2d2d2d] h-2 rounded-full overflow-hidden">
+                                    <div class="bg-purple-500 h-full rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span class="text-gray-400">Return on Equity (ROE)</span>
+                                    <span class="text-green-400 font-bold">45.64%</span>
+                                </div>
+                                <div class="w-full bg-[#2d2d2d] h-2 rounded-full overflow-hidden">
+                                    <div class="bg-amber-500 h-full rounded-full" style="width: 45.64%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="switchTab('ratios')" class="mt-4 w-full py-2 bg-[#2d2d2d] hover:bg-gray-700 text-xs font-semibold rounded-xl text-gray-200 transition-colors">
+                        View All Ratios & Efficiency <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
 
